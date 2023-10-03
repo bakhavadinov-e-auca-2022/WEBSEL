@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Block Example</title>
+    <style>
+        /* CSS for styling and hiding the content */
+        .toggle-container {
+            margin: 100px;
+            padding: 200px;
+            border: 10px solid #ccc;
+            background-color: #f5f5f5;
+        }
+
+     .bigger-image {
+            width: 400px;
+            height: 300px;
+        }
+
+        /* Define a CSS class for smaller images */
+        .smaller-image {
+            width: 200px;
+            height: 150px;
+        }
+
+        /* Define a CSS class for images that fit their container width */
+        .fit-container-width {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Compound selector targeting a specific image with multiple classes */
+        .bigger-image.fit-container-width {
+            /* Combine the properties of both classes */
+            max-width: 400px; /* Maximum width for fitting container */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Another compound selector example */
+        .smaller-image.fit-container-width {
+            max-width: 200px;
+            height: auto;
+        }
+        }
+
+        /* Define a CSS class for images that fit their container width */
+        .fit-container-width {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Compound selector targeting a specific image with multiple classes */
+        .bigger-image.fit-container-width {
+            /* Combine the properties of both classes */
+            max-width: 400px; /* Maximum width for fitting container */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Another compound selector example */
+        .smaller-image.fit-container-width {
+            max-width: 200px;
+            height: auto;
+        }
+
+        /* Define a CSS class for images that fit their container width */
+        .fit-container-width {
+            max-width: 100%;
+            height: auto;
+        }
+      
+        .toggle-content {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f5f5f5; /* White background */
+        }
+
+        /* Styling for the toggle button */
+        .toggle-button {
+            cursor: pointer;
+            color: RED;
+            text-decoration: underline;
+            display: flex;
+            align-items: center; /* Center vertically */
+        }
+
+        .button-icon {
+            width: 300px; /* Set the width of the image */
+            height: 265px; /* Set the height of the image */
+            margin-right: 30px; /* Add some spacing between the image and text */
+        }
+
+        /* Styling for headings and links */
+        h2 {
+            color: #007acc; /* Blue color */
+        }
+
+        a {
+            color: #ff7700; /* Orange color */
+            text-decoration: none;
+          text-align: center;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="toggle-container">
+        <h2>The Meaning and History of Memes</h2>
+      
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p class="toggle-content">This is some hidden information that can be toggled.</p>
+        <p class="toggle-content">Where does the word “meme” come from?
+
+The word “meme” has been used in the New York Times Crossword 60 times since the puzzle’s inception in the 1940s, according to XWordInfo. Although it’s difficult to identify the first meme ever, the British evolutionary biologist Richard Dawkins is credited with introducing the term in his 1976 book, “The Selfish Gene.” In Mr. Dawkins’s original conception, a “meme” was analogous to a “phoneme,” the smallest unit of sound in speech, or a “morpheme,” the smallest meaningful subunit of a word, Kirby Conrod, a professor of linguistics at Swarthmore College, said. “I would explain the concept of a meme — a self-replicating chunk of information — by asking someone about an inside joke they had with friends or an advertising jingle that’s been stuck in their head for 20 years,” Professor Conrod said. “That chunk of information, the joke or the jingle, self-replicates because we humans like to share and repeat stuff. When we repeat the joke, or sing the jingle, that’s an instance of the meme reproducing itself.” The word “meme” first appeared in the New York Times Crossword in 1953 with the clue “Same: French.” Its most recent appearance was on Dec. 24, 2021, with the clue “Something that gets passed around a lot.”.</p>
+        <p class="toggle-content">Ingredients for a good meme
+
+Noteworthy pop culture events are breeding grounds for meme creation. In fact, this year, Instagram hired Saint Hoax to cover the Met Gala as its first-ever meme correspondent, knowing that interesting, culturally relevant content would come from the event and spread on social platforms. “Memes are basically editorial cartoons for the internet age,” Saint Hoax said. “The power of a meme lies in its transmissibility and unique knack for being cross-cultural.” And memes have the uncanny ability to capture a moment while distracting people from reality. They encapsulate the era we are living in while also reminding us that it’s not all that serious, Lola Tash, one of the founders of the meme account My Therapist Says, said.
+
+Memes are shareable by nature. “In a world where you are scrolling through news feeds for hours a day, the meme format catches your eye, and most of them can be read and understood within seconds,” said Samir Mezrahi, the deputy director of social media at BuzzFeed, who also runs Kale Salad, a meme account with nearly four million followers.
+
+Creating and sharing memes facilitates a sense of community online while maintaining a feeling of exclusivity. “Memes bring people together through humor and can act as a catalyst for creating social or political commentary,” said Kit Chilvers, the chief executive and founder of Pubity Group, a collection of social media accounts that has more than 80 million total followers. “Often, memes can be quite exclusive, as only people who are familiar with the origin of the meme will understand it,” Chilvers added.</p>
+        <p class="toggle-content">Toggle it on/off by clicking the button below.</p>
+        <button class="toggle-button" onclick="toggleContent()">
+            <img src="https://i.imgflip.com/3w5h44.png?a470976" alt="Image Inside Button" class="button-icon">
+            Toggle
+        </button>
+        <img src="https://scontent.ffru2-1.fna.fbcdn.net/v/t1.6435-9/35347259_213426292605171_592828060919660544_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9267fe&_nc_ohc=PjmHmzSQXogAX8wTJLF&_nc_ht=scontent.ffru2-1.fna&oh=00_AfDS3q9DmDIrc7CPSyht6myPxdq0CcsQ4o-XkSuMDYsLmg&oe=65432593" alt="Image After Toggle" width="500" height="450">
+    </div>
+
+    <script>https://scontent.ffru2-1.fna.fbcdn.net/v/t1.6435-9/35347259_213426292605171_592828060919660544_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9267fe&_nc_ohc=PjmHmzSQXogAX8wTJLF&_nc_ht=scontent.ffru2-1.fna&oh=00_AfDS3q9DmDIrc7CPSyht6myPxdq0CcsQ4o-XkSuMDYsLmg&oe=65432593
+        // JavaScript for toggling the content
+        function toggleContent() {
+            const contentElements = document.querySelectorAll('.toggle-content');
+
+            contentElements.forEach((element) => {
+                if (element.style.display === 'none' || element.style.display === '') {
+                    element.style.display = 'block';
+                } else {
+                    element.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
